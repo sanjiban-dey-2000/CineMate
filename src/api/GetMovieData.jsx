@@ -4,7 +4,7 @@ const GetMovieData = async({params}) => {
    const apiKey=import.meta.env.VITE_MOVIE_API_KEY;
    const movieID=params.movieID;
     try{
-        const response=await fetch(`http://www.omdbapi.com/?i=${movieID}&apikey=${apiKey}`);
+        const response=await fetch(`https://www.omdbapi.com/?i=${movieID}&apikey=${apiKey}`);
         const data=response.json();
         return data;
     }catch(error){
